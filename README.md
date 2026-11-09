@@ -1,9 +1,26 @@
 
 Making a 3d Game
 
+
+HOW TO DOWNLOAD:
+
+1. Go to [https://jaxon8165.itch.io/3d-game](url)
+2. Click Download
+3. <img width="900" height="503" alt="image" src="https://github.com/user-attachments/assets/c7f7e8c5-aac3-4f7b-97b8-95b587a89aab" />
+
+4. Extract the folder
+5. <img width="374" height="96" alt="image" src="https://github.com/user-attachments/assets/068015e3-c8ad-4b23-883a-5e479c447561" />
+
+6. Click "First Person shooter.exe"!
+<img width="381" height="23" alt="image" src="https://github.com/user-attachments/assets/afe4cf30-6382-4386-b948-249b7e75472f" />
+
+
+
 WEEK 1:
 
 This game is a shell of what it will be in the fututre. My plan for this game is to be a fully working 3d puzzle-based shooter. For the last week I spent time on modling the guns, coding everything, adding a pickup/grab system and much more! Next week I plan to add physcis based puzzles, enimes you can shoot, and much more!
+
+
 
 This week, I learned a few things such as 
 - Modeling(Importing models from blender to unity)
