@@ -1,6 +1,6 @@
-using Unity.Mathematics;
+
 using UnityEngine;
-using UnityEngine.Rendering;
+
 
 public class First_Person : MonoBehaviour
 {

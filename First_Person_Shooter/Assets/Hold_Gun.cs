@@ -1,5 +1,4 @@
-using Unity.Mathematics;
-using Unity.VisualScripting;
+
 using UnityEngine;
 
 public class detect_Gun : MonoBehaviour
@@ -19,7 +18,7 @@ private Vector3 distance;
 
     //Variables
 public bool detect = false;
-private float maxdis;
+ private float maxdis;
     private bool Holding = false;
    
     //Raycasts
@@ -53,19 +52,19 @@ private RaycastHit Hit;
 
         Ray ray = Camera.main.ScreenPointToRay(new Vector2(Screen.width / 2, Screen.height / 2));
 
-       
 
         if(Physics.Raycast(ray, out Hit, maxdis, LayerMask.GetMask("Gun")) && Input.GetKeyDown(KeyCode.E) && Script.pickup == false && Holding == false)
         {
             detect = true;
+            
         }
         else 
           {
             detect = false;
         }
-
-            Debug.DrawRay(ray.origin,ray.direction * maxdis,Color.red);
-
+        Debug.DrawRay(ray.origin, ray.direction, Color.red);
+           
+        
     }
 
 
@@ -131,5 +130,9 @@ private RaycastHit Hit;
 
         }
     }
-    // Quaternion(-0.502286553,0.628397048,0.449171573,0.388677597) Vector3(-0.540014625,-0.255387723,0.913473129)
+    
+    public bool show()
+    {
+        return Holding;
+    }
 }

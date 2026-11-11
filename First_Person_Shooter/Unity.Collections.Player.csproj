@@ -67,8 +67,8 @@
   <ItemGroup>
     <Compile Include="Library\PackageCache\com.unity.collections@ec2c217e4cb2\Unity.Collections\StreamCompressionModel.cs" />
     <Compile Include="Library\PackageCache\com.unity.collections@ec2c217e4cb2\Unity.Collections\FixedList.gen.cs" />
-    <Compile Include="Library\PackageCache\com.unity.collections@ec2c217e4cb2\Unity.Collections\FixedStringParseMethods.cs" />
     <Compile Include="Library\PackageCache\com.unity.collections@ec2c217e4cb2\Unity.Collections\BitField.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collections@ec2c217e4cb2\Unity.Collections\FixedStringParseMethods.cs" />
     <Compile Include="Library\PackageCache\com.unity.collections@ec2c217e4cb2\Unity.Collections\NativeText.gen.cs" />
     <Compile Include="Library\PackageCache\com.unity.collections@ec2c217e4cb2\Unity.Collections\DoubleRewindableAllocators.cs" />
     <Compile Include="Library\PackageCache\com.unity.collections@ec2c217e4cb2\Unity.Collections\UnsafeQueue.cs" />

@@ -1,9 +1,9 @@
 
-using Unity.Mathematics;
+using System.Runtime.CompilerServices;
 using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.Rendering;
-using UnityEngine.Rendering.Universal;
+using UnityEngine.ProBuilder.Shapes;
+
 
 
 public class Player_Controller : MonoBehaviour
@@ -16,7 +16,7 @@ public class Player_Controller : MonoBehaviour
     [Header("Transforms")]
     [SerializeField] private Transform SphereCast;
     [SerializeField] private Transform Camera;
-
+    [SerializeField] private Transform SSS;
     RaycastHit hit;
 
     [Header("RigidBodies")]
@@ -24,10 +24,11 @@ public class Player_Controller : MonoBehaviour
 
     [Header("Floats")]
     [SerializeField] private float Player_Speed;
+    private float e;
     [SerializeField] private float Max_Dis;
     [SerializeField] private float Radius;
     [SerializeField] public float senstivity;
-
+    [SerializeField] private float jump;
     [Header("Strings")]
     [SerializeField] private string[] Grounds;
     //Bools
@@ -43,12 +44,17 @@ public class Player_Controller : MonoBehaviour
     float z;
     private void Start()
     {
-        
+        e = Player_Speed;
     }
     private void Update()
     {
+        if (hit.collider != null)
+        {
+            Debug.Log(hit.collider);
+        }
         GetInput();
         Set_Grounded();
+        Jump();
         RotatePlayer();
         
         
@@ -73,16 +79,19 @@ z = Input.GetAxisRaw("Vertical");
     private void Set_Grounded()
     {
         //SPHERE CAST DOWN
-        ray = new Ray(SphereCast.position, Vector3.down);
-        if (Physics.SphereCast(ray,Radius,out hit, LayerMask.GetMask(Grounds)))
-            {
-            
-            Grounded = false;
-        }
-        else
-        {
-            Grounded = true;
-        }
+        ray = new Ray(SSS.position,Vector3.down);
+
+
+
+        Grounded = Physics.CheckSphere(SphereCast.position, Radius, LayerMask.GetMask(Grounds));
+
+
+
+
+        
+
+       
+       
 
     }
 
@@ -93,18 +102,22 @@ z = Input.GetAxisRaw("Vertical");
     {
         
 
-        //Adds relative force
-        player.AddRelativeForce(x * Player_Speed, 0, z * Player_Speed);
+       
 
         if(Grounded == true)
         {
             
+           
             player.linearDamping = 5f;
         }
         else
         {
-            player.linearDamping = 0;
+          
+            player.linearDamping = 0f;
         }
+
+ //Adds relative force
+        player.AddRelativeForce(x * Player_Speed, 0, z * Player_Speed);
     }
 
 
@@ -138,10 +151,16 @@ z = Input.GetAxisRaw("Vertical");
 
         
 
-
+       
 
 }
-    
+    private void Jump()
+    {
+        if (Grounded == true && Input.GetKeyDown(KeyCode.Space))
+        {
+            player.AddForce(player.transform.up * jump);
+        }
+    }
 private void OnDrawGizmos()
     {
         Gizmos.color = Color.red;

@@ -1509,6 +1509,10 @@
       <Project>{353C4284-6DE7-916E-5305-72DF14B660CE}</Project>
       <Name>Unity.VisualScripting.Flow</Name>
     </ProjectReference>
+    <ProjectReference Include="Unity.ProBuilder.Editor.csproj">
+      <Project>{9DCE05E8-7192-7A99-FEA5-10D6F2EC59B4}</Project>
+      <Name>Unity.ProBuilder.Editor</Name>
+    </ProjectReference>
     <ProjectReference Include="Unity.TextMeshPro.Editor.csproj">
       <Project>{E06421A4-6E5A-6B11-9A7B-A6F282A1FA72}</Project>
       <Name>Unity.TextMeshPro.Editor</Name>
@@ -1532,6 +1536,10 @@
     <ProjectReference Include="Unity.Collections.csproj">
       <Project>{03AEB332-6F1C-5150-BC78-48FCD27D53AD}</Project>
       <Name>Unity.Collections</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.ProBuilder.AddOns.Editor.csproj">
+      <Project>{BFAAD5BD-4001-AD45-0863-48CBD3D190E6}</Project>
+      <Name>Unity.ProBuilder.AddOns.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.RenderPipelines.GPUDriven.Runtime.csproj">
       <Project>{CFFB8742-E0FE-76CC-CA6F-69971F070EC5}</Project>
@@ -1585,9 +1593,17 @@
       <Project>{ADE8074C-7D5D-2AB8-69C4-0762146E8855}</Project>
       <Name>Unity.PathTracing.Editor</Name>
     </ProjectReference>
+    <ProjectReference Include="Unity.ProBuilder.AssetIdRemapUtility.csproj">
+      <Project>{16DCE7BC-0AA1-2509-5D6E-DB60E01BB1A2}</Project>
+      <Name>Unity.ProBuilder.AssetIdRemapUtility</Name>
+    </ProjectReference>
     <ProjectReference Include="Unity.RenderPipelines.Universal.Runtime.csproj">
       <Project>{F3882720-BC75-54A3-BDA6-5FC3DBF127CB}</Project>
       <Name>Unity.RenderPipelines.Universal.Runtime</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.ProBuilder.csproj">
+      <Project>{67EB63B3-18C5-D94E-11D3-43E0708A13E2}</Project>
+      <Name>Unity.ProBuilder</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.VisualScripting.State.csproj">
       <Project>{BE77903F-E828-FAA3-4804-6F1AB4D38A91}</Project>
@@ -1620,6 +1636,10 @@
     <ProjectReference Include="Unity.InputSystem.csproj">
       <Project>{F0C4BCBA-D258-6EF1-1C90-B468DE2CEF7C}</Project>
       <Name>Unity.InputSystem</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.Settings.Editor.csproj">
+      <Project>{0C826C54-C6FA-2B44-0CAB-C14587FE380D}</Project>
+      <Name>Unity.Settings.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="UnityEditor.UI.csproj">
       <Project>{1838F7C1-E1E2-9BCB-6944-08C9B4E96754}</Project>

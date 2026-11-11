@@ -1,7 +1,5 @@
 
-using System;
-using System.Security.Cryptography.X509Certificates;
-using Unity.VisualScripting;
+
 using UnityEngine;
 
 public class PickUP : MonoBehaviour
@@ -15,7 +13,7 @@ public class PickUP : MonoBehaviour
 
 
     [Header("floats")]
-    [SerializeField] private float maxdis;
+    [SerializeField] private  float maxdis;
     [SerializeField] float Offset;
 
 
@@ -114,7 +112,7 @@ if (pickup && Input.GetKeyDown(KeyCode.T))
 
         TempRigidBody.useGravity = false;
          
-       
+        //Adds force Mimnus the linear velo So it counteracts the overshooting effect.
             TempRigidBody.AddForce(direction * 50f - TempRigidBody.linearVelocity * 15f,
                 ForceMode.Acceleration);
        
@@ -170,10 +168,6 @@ if (pickup && Input.GetKeyDown(KeyCode.T))
         return maxdis;
     }
 
-    private void OnDrawGizmos()
-    {
-        Gizmos.color = Color.red;
-        Gizmos.DrawSphere(Grabbing.position, radius);
-    }
+   
 
 }
