@@ -1,8 +1,6 @@
 
-using System.Runtime.CompilerServices;
-using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.ProBuilder.Shapes;
+
 
 
 
@@ -29,11 +27,12 @@ public class Player_Controller : MonoBehaviour
     [SerializeField] private float Radius;
     [SerializeField] public float senstivity;
     [SerializeField] private float jump;
+    [SerializeField] private float Inair;
     [Header("Strings")]
     [SerializeField] private string[] Grounds;
     //Bools
     private bool Focus = false;
-    private bool Grounded;
+    public bool Grounded;
 
     //Raycasts
     Ray ray;
@@ -48,10 +47,7 @@ public class Player_Controller : MonoBehaviour
     }
     private void Update()
     {
-        if (hit.collider != null)
-        {
-            Debug.Log(hit.collider);
-        }
+        
         GetInput();
         Set_Grounded();
         Jump();
@@ -112,12 +108,24 @@ z = Input.GetAxisRaw("Vertical");
         }
         else
         {
-          
             player.linearDamping = 0f;
+            
         }
 
  //Adds relative force
-        player.AddRelativeForce(x * Player_Speed, 0, z * Player_Speed);
+           if (Grounded == true)
+        {
+player.AddRelativeForce(x * Player_Speed, 0, z * Player_Speed);
+        }
+        else
+        {
+            player.AddRelativeForce(new Vector3(x * Inair, 0, z * Inair)  /*- new Vector3(player.linearVelocity.x * Max_Dis, 0, player.linearVelocity.z * Max_Dis)*/);
+            
+
+        }
+        
+        
+
     }
 
 
@@ -160,6 +168,7 @@ z = Input.GetAxisRaw("Vertical");
         {
             player.AddForce(player.transform.up * jump);
         }
+
     }
 private void OnDrawGizmos()
     {
