@@ -41,6 +41,8 @@ MISC:
 
 I also Added a death and win screen for when you die and win in the game.
 
+I added a timer that runs when you play to track your time to see how long it takes you to complete the level.
+
 
 
 WEEK 1:
