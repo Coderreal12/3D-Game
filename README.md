@@ -48,11 +48,15 @@ I added a timer that runs when you play to track your time to see how long it ta
 
 I also Added text which servers as a tutorial in the game.
 
-I made Targets
+I made Buttons that open a door when a cube is placed on them.
 
 
 <img width="1086" height="597" alt="image" src="https://github.com/user-attachments/assets/e0032a92-7256-446d-b6b2-34b17fbfe276" />
 
+
+And I made Targets that Activate when shooting at them.
+
+<img width="1116" height="578" alt="image" src="https://github.com/user-attachments/assets/6fbb8a0d-2c4f-4166-9082-393f661351ff" />
 
 WEEK 1:
 
