@@ -4,15 +4,22 @@ Making a 3d Game
 
 HOW TO DOWNLOAD:
 
-1. Go to [https://jaxon8165.itch.io/3d-game](url)
+1. Go to [[https://jaxon8165.itch.io/3d-game](url)](https://jaxon8165.itch.io/3d-parkour-game)
 2. Click Download
-3. <img width="900" height="503" alt="image" src="https://github.com/user-attachments/assets/c7f7e8c5-aac3-4f7b-97b8-95b587a89aab" />
+<img width="1087" height="557" alt="image" src="https://github.com/user-attachments/assets/5151f7c9-95bc-42ec-8138-aedabffd1426" />
 
 4. Extract the folder
 5. <img width="374" height="96" alt="image" src="https://github.com/user-attachments/assets/068015e3-c8ad-4b23-883a-5e479c447561" />
 
 6. Click "First Person shooter.exe"!
 <img width="381" height="23" alt="image" src="https://github.com/user-attachments/assets/afe4cf30-6382-4386-b948-249b7e75472f" />
+
+
+WEEK 2:
+
+
+
+
 
 
 
