@@ -35,8 +35,11 @@ WEEK 2:
 
 For the raycasts, I Used Two Raycasts for the wall checks to see if the player is wallrunning or not.
 
-I also made a sliding mechanic that allows to go lower (by having two colliders (One Shorter and one longer) and enabling one and disabling the other when needed). 
+I also made a sliding mechanic that allows you to go lower (by having two colliders (One Shorter and one longer) and enabling one and disabling the other when needed). 
 
+MISC:
+
+I also Added a death and win screen for when you die and win in the game.
 
 
 
