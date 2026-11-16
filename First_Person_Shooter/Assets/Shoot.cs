@@ -18,7 +18,7 @@ public class Shoot : MonoBehaviour
 
     [Header("Strings")]
     [SerializeField] private string[] Layermasks;
-
+    [SerializeField] private float Bullet_Speed;
     [SerializeField] private Transform cam;
     //For Raycasting
     RaycastHit hit;
@@ -48,7 +48,7 @@ public class Shoot : MonoBehaviour
     {
         
          bulleter = Instantiate(bullet);
-        bulleter.transform.position = Camera.main.transform.position + Camera.main.transform.forward * 3f;
+        bulleter.transform.position = Camera.main.transform.position + Camera.main.transform.forward * 2f;
         
 
 

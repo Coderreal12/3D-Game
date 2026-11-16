@@ -1,18 +1,31 @@
+
+
 using UnityEngine;
 
 public class Wall_Run : MonoBehaviour
 {
+    [SerializeField] private float inty;
+    [Header("Scripts")]
+
     [SerializeField] private Player_Controller script;
+
+    [Header("Rigidbodies")]
+    public bool onwall;
+    
     [SerializeField] private Rigidbody player;
-    
+
+    [Header("Transfroms")]
+    [SerializeField] private Transform Infront;
+
+    [Header("Floats")]
     [SerializeField] private float Raycast_Offset;
-    
-    
     [SerializeField] private float downForce;
     [SerializeField] private float Wall_DashForce;
     private float InputY;
-    bool addForce;
-
+    private float Minus;
+    
+    public bool addForce;
+    bool jumponwall;
     
 
 
@@ -30,37 +43,77 @@ public class Wall_Run : MonoBehaviour
     Vector3 DirectionRight;
     [SerializeField] private Transform Wall_RayastRight;
     bool wallRight = false;
-    
-    // Update is called once per frame
-    void Update()
-    {
-        //Gets Input for Y
-        InputY = Input.GetAxisRaw("Horizontal");
-       
+    bool jumping;
+    bool bug;
 
+    // Update is called once per frame
+
+    private void Update()
+    {
+        
+        //Getting Input;
+      InputY = Input.GetAxisRaw("Horizontal");
+        jumponwall = Input.GetKeyDown(KeyCode.Space);
+        //So it slides down.
+       if (bug == true)
+        {
+            player.linearVelocity = new Vector3(0, inty, 0);
+        }
+
+    }
+
+
+    void FixedUpdate()
+    {
+        // WallJump();
+        //Gets Input for Y
+        
+       
+        //Sends raycasts.
         SendLeft();
         SendRight();
-        if (script.Grounded == true)
+        WallJump();
+       // if grounded then Change the wall dash force to variable MINUS.
+       /* if (script.Grounded == true)
         {
+            Minus = Wall_DashForce;
             addForce = true;
-        }    
+        }*/
+       
 
 
         //Asks if Input is greater or less than 0, and Raycast is true, and It is not ground then wall run.
-        if (wallLeft && InputY > 0 || wallLeft && InputY < 0 && script.Grounded == false || wallRight && InputY > 0 || wallRight && InputY < 0 && script.Grounded == false)
+        if (wallLeft && InputY > 0 || wallLeft && InputY < 0 && script.Grounded == false && Input.GetKey(KeyCode.Space)|| wallRight && InputY > 0 || wallRight && InputY < 0 && script.Grounded == false && Input.GetKey(KeyCode.Space))
         {
-
-            if(addForce == true)
+            
+           
+            if(player.linearVelocity == new Vector3(0,0,0) )
             {
-                player.AddForce(Camera.main.transform.right * Wall_DashForce);
-                addForce = false;
+               
+                bug = true;
+                
+            }
+            else
+            {
+                bug = false;
             }
 
+                float x = Input.GetAxisRaw("Horizontal");
 
 
-            player.AddForce(transform.right * InputY * Force );
+            addForce = true;
+            Minus = Minus / 0.5f;
+
+
+
+
+            //   player.AddForce(transform.right * InputY * Force);
+           
+           
             player.AddRelativeForce(Vector3.down * downForce);
+
         }
+
     }
 
 
@@ -76,15 +129,24 @@ public class Wall_Run : MonoBehaviour
 
     private void SendRight()
     {
-        DirectionRight =  Wall_RayastRight.position - Wall_RayastRight.transform.forward;
+        DirectionRight =  Wall_RayastRight.position - transform.position;
         Ray ray = new Ray(Wall_RayastRight.position, DirectionRight);
         wallRight = Physics.Raycast(ray, Distance, LayerMask.GetMask("Wall"));
+       
+        Debug.DrawRay(ray.origin, ray.direction * Distance,Color.black);
         
-
     }
 
 
-    
+    private void WallJump()
+    {
+        if (addForce == true && jumponwall && script.Grounded == false)
+        {
+            player.AddForce(Camera.main.transform.forward * Wall_DashForce);
+            addForce = false;
+
+        }
+    }
 
 
 }

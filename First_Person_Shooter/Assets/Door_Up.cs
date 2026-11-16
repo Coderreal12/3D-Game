@@ -19,7 +19,8 @@ public class Door_Up : MonoBehaviour
         if (collision.collider.CompareTag("Cube"))
         {
 
-            door.position = Vector3.MoveTowards(door.position, up, speed);
+            door.position = Vector3.MoveTowards(door.position, up,speed);
+            
 
 
         }
