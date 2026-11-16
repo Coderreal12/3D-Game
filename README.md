@@ -16,6 +16,9 @@ HOW TO DOWNLOAD:
 
 
 WEEK 2:
+
+
+
  I completed the game and Added Many Featues.
  
  This week, while I didn't learn a lot of things, I did strengthen my skills in areas that include:
