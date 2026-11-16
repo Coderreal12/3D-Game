@@ -4,7 +4,7 @@ Making a 3d Game
 
 HOW TO DOWNLOAD:
 
-1. Go to [[https://jaxon8165.itch.io/3d-game](url)](https://jaxon8165.itch.io/3d-parkour-game)
+1. Go to (https://jaxon8165.itch.io/3d-parkour-game)
 2. Click Download
 <img width="1087" height="557" alt="image" src="https://github.com/user-attachments/assets/5151f7c9-95bc-42ec-8138-aedabffd1426" />
 
