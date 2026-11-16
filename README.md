@@ -48,6 +48,12 @@ I added a timer that runs when you play to track your time to see how long it ta
 
 I also Added text which servers as a tutorial in the game.
 
+I made Targets
+
+
+<img width="1086" height="597" alt="image" src="https://github.com/user-attachments/assets/e0032a92-7256-446d-b6b2-34b17fbfe276" />
+
+
 WEEK 1:
 
 This game is a shell of what it will be in the future. My plan for this game is to be a fully working 3d puzzle-based shooter. For the last week I spent time on modling the guns, coding everything, adding a pickup/grab system and much more! Next week I plan to add physcis based puzzles, enimes you can shoot, and much more!
