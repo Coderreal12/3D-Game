@@ -46,7 +46,7 @@ I also Added a death and win screen for when you die and win in the game.
 
 I added a timer that runs when you play to track your time to see how long it takes you to complete the level.
 
-
+I also Added text which servers as a tutorial in the game.
 
 WEEK 1:
 
@@ -72,12 +72,12 @@ For the grab system (Dragging Things in the air) I learned about a ScreenToPoint
 (*DISCLAIMER*) AI was used to help this one and ONLY part of the code, it was the fact that when it would grab, it would jitter when it reached it/the weapon would constantly overshoot its target and repeat that cycle, After hours of debugging I caved in and 
 asked an AI, All it told me to do was to add a slow down modifier. Everything other line of code was done by me and me only.
 
-For the Pickup system (Equiping Items) I had a hold point parent ed the my camera so it would follow it when you pick it up. It can't shoot just yet; however It will next week!
+For the Pickup system (Equipping Items) I had a hold point parented to my camera so it would follow it when you pick it up. It can't shoot just yet; however It will next week!
 <img width="1919" height="1079" alt="image" src="https://github.com/user-attachments/assets/5c2be9a0-f676-4fa0-842f-61ef0676bc13" />
 
 CONTROLS:
 
-W/S: FORWARD BACK.
+W/S: FORWARD/BACK.
 A/D: LEFT RIGHT.
 
 R: GRAB
